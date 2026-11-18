@@ -70,6 +70,7 @@ export default function StudentTable({
               <th className="px-5 py-4">Kelas</th>
               <th className="px-5 py-4">Jurusan</th>
               <th className="px-5 py-4">Alamat</th>
+              <th className="px-5 py-4">Tanggal Lahir</th>
               <th className="px-5 py-4 text-center">Aksi</th>
             </tr>
           </thead>
@@ -103,6 +104,13 @@ export default function StudentTable({
 
                 <td className="max-w-48 truncate px-5 py-4 text-slate-500">
                   {student.alamat}
+                </td>
+                <td>
+                  {student.tanggal_lahir
+                    ? new Date(student.tanggal_lahir).toLocaleDateString(
+                        "id-ID",
+                      )
+                    : "-"}
                 </td>
 
                 <td className="px-5 py-4">

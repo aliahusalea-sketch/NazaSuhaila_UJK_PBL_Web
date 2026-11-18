@@ -14,5 +14,5 @@ export interface StudentInput {
   kelas: string;
   jurusan: string;
   alamat: string;
-  tanggal_lahir: string;
+  tanggal_lahir: string | null;
 }
